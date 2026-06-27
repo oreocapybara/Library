@@ -4,46 +4,69 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project Library</title>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
 		<div class="container">
-			<h1>My Library</h1>
-
-			<!--Add button-->
-			<button class="add-btn">Add Book</button>
+			<nav>
+				<h1>My Library</h1>
+				<!--Add button-->
+				<button class="add-btn">Add Book</button>
+			</nav>
 
 			<!--Modal-->
 			<dialog closedby="any">
 				<form>
 					<div>
-						<label for="title">Book Title</label>
-						<input id="title" name="title" type="text" placeholder="Enter book title" />
+						<label for="title">Title<span>*</span> </label>
+						<input
+							id="title"
+							name="title"
+							type="text"
+							placeholder="Enter book title"
+							required
+						/>
 					</div>
 
 					<div>
-						<label for="author">Book Author</label>
-						<input id="author" name="author" type="text" placeholder="Enter book author" />
+						<label for="author">Author<span>*</span> </label>
+						<input
+							id="author"
+							name="author"
+							type="text"
+							placeholder="Enter book author"
+							required
+						/>
 					</div>
 
 					<div>
-						<label for="pages">Pages</label>
-						<input id="pages" name="pages" type="number" placeholder="Enter number of pages" />
+						<div>
+							<label for="pages">Pages</label>
+							<input
+								id="pages"
+								name="pages"
+								type="number"
+								placeholder="1-9999"
+								default="1"
+								min="1"
+								max="9999"
+							/>
+						</div>
+
+						<div>
+							<label for="read">Read?</label>
+							<input id="read" name="read" type="checkbox" />
+						</div>
 					</div>
 
-					<div>
-						<label for="read">Have you read the book?</label>
-						<input id="read" name="read" type="checkbox" />
-					</div>
-					
-					
-					<button type="submit">Add Book</button>
+					<button type="submit"> Save</button>
 				</form>
 			</dialog>
 
+			<!--Display area for books-->
 			<div class="book-container"></div>
 		</div>
 
-		<script src="./script.js" defer />
+		<script src="./script.js" defer></script>
 	</body>
 </html>
