@@ -1,0 +1,138 @@
+:root{
+	font-family: Inter;
+	line-height: 1.5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	display: flex;
+	background: #454346;
+	background-image: url(./assets/background.jpg);
+	background-size: 256px;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+/*Main Page*/
+
+nav {
+	display: flex;
+	margin: 0 128px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+.add-btn {
+	background-color: rosybrown;
+	color: white;
+	padding: 8px 16px;
+	font-weight: 600;
+	border-radius: 8px;
+	border: 1px solid rosybrown;
+	transition: background 0.3s, color 0.3s;
+
+}
+
+.add-btn:hover {
+	background: lightblue;
+	color: black;
+	transition: background 0.1s, color 0.1s;
+}
+
+/*Book Container*/
+.book-container {
+	display: flex;
+	flex-flow: wrap;
+	border-radius: 8px;
+	
+	border: 1px solid rosybrown;
+	height: 500px;
+	margin: 0 100px;
+
+	padding: 16px;
+
+	div {
+		flex: 0 1 256px;
+		height: 200px;
+		display: flex;
+		flex-flow: column;
+		border: 2px solid lightskyblue;
+		padding: 4px;
+
+		h1 {
+			text-align: justify;
+			margin: 0;
+		}
+	}
+}
+
+
+dialog{
+	margin: auto;
+	padding: 16px;
+	border-radius: 8px;
+	border: 1px solid gray;
+}
+
+form {
+	display: flex;
+	flex-flow: column;
+	gap: 8px;
+
+	div{
+		display: flex;
+		justify-content: space-between;
+		gap: 8px;
+		span{
+			color: red;
+		}
+	};
+
+	div:nth-of-type(3){
+		display: flex;
+		justify-content: space-between;
+		
+		div{
+			gap: 8px;
+			#pages{
+				width: 64px;
+			}
+		}
+	}
+
+	button{
+		font-weight: 600;
+		padding: 8px;
+		border-radius: 4px;
+		border: 1px solid gray;
+		background: lightblue;
+		transition: background 0.3s, color 0.3s;
+	}
+
+	button:hover {
+		background: rosybrown;
+		color: white;	
+		transition: background 0.3s, color 0.3s;
+	}
+
+	button:active {
+		background: rosybrown;
+		color: white;
+		transition: background 0.1s, color 0.1s;
+	}
+}
+

@@ -3,12 +3,14 @@ const addButton = document.querySelector(".add-btn");
 const dialog = document.querySelector("dialog");
 const form = document.querySelector("form");
 
+// Event listener for the add button
 addButton.addEventListener("click", () => {
 	dialog.showModal();
+	console.log('addButton clicked');
 });
 
 form.addEventListener("submit", (e) => {
-	e.preventDefault();
+	e.preventDefault(); // Prevent empty form submission
 
 	const title = form.elements["title"].value;
 	const author = form.elements["author"].value;
@@ -20,7 +22,7 @@ form.addEventListener("submit", (e) => {
 	form.reset();
 });
 
-const myLibrary = [];
+const myLibrary = []; //Array to store book instances
 
 // Object Constructor
 function Book(title, author, pages, read = false) {
@@ -75,7 +77,7 @@ function displaySingleBook(book) {
 	const headerTitle = document.createElement("h1");
 	headerTitle.textContent = book.title;
 
-	const author = document.createElement("h2");
+	const author = document.createElement("h3");
 	author.textContent = book.author;
 
 	const pages = document.createElement("p");
